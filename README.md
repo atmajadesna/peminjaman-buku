@@ -62,6 +62,12 @@ Dibangun dengan Laravel 13 + Blade + SQLite, tanpa framework CSS eksternal — s
 |---|---|
 | ![Anggota](docs/screenshots/anggota.png) | ![Mode gelap](docs/screenshots/dashboard-gelap.png) |
 
+### Demo daring
+
+Ada versi yang bisa langsung dicoba tanpa memasang apa pun: **<https://pustaka.laura.web.id>**
+
+Masuk dengan `petugas@perpus.test` / `password`. Data di sana buatan dan terbuka untuk diubah siapa saja — setiap halaman menampilkan pemberitahuan soal itu.
+
 ---
 
 ## Menjalankan secara lokal
@@ -151,6 +157,16 @@ php artisan test
 Pemeriksaan antarmuka dijalankan terpisah dengan Playwright pada lima lebar layar (320, 375, 414, 768, 1024, 1440 px): alur masuk, katalog, modal, mode gelap, skip-link, laci navigasi, ketiadaan overflow horizontal, keselarasan kartu, dan tidak adanya galat JavaScript.
 
 Untuk pemasangan yang bisa diakses publik, setel `PUSTAKA_DEMO=true`. Setiap halaman akan menampilkan pemberitahuan bahwa data di dalamnya buatan dan dapat diubah siapa saja.
+
+---
+
+## Catatan pemasangan
+
+Beberapa hal yang baru terlihat saat aplikasi benar-benar dipasang di server, dan sudah ditangani di kode:
+
+- **Percayai header proxy.** Kalau TLS diputus di Cloudflare atau load balancer, origin hanya melihat HTTP. Tanpa `trustProxies`, Laravel membuat URL `http://`, cookie sesi `secure` ikut terbuang, dan setiap login memantul balik ke formulir. Diatur di `bootstrap/app.php`.
+- **Berkas SQLite butuh direktori yang bisa ditulis**, bukan hanya berkasnya — SQLite membuat berkas `-journal` di sebelah basis data. Pada pemasangan ini basis data diletakkan di `/var/lib/pustaka/` dan dimiliki pengguna PHP-FPM.
+- **Setel `PUSTAKA_DEMO=true`** bila instance terbuka untuk umum, agar banner peringatan muncul.
 
 ---
 
