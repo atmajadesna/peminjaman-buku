@@ -9,7 +9,7 @@
 
   <div class="page-header">
     <div>
-      <h2 class="page-title">Anggota Perpustakaan</h2>
+      <h1 class="page-title">Anggota Perpustakaan</h1>
       <p class="page-subtitle">{{ number_format($members->total(), 0, ',', '.') }} anggota terdaftar</p>
     </div>
     <button class="btn btn-primary" type="button" onclick="openModal('add-member')">
@@ -117,7 +117,7 @@
       <form method="POST" action="{{ route('members.store') }}">
         @csrf
         <div class="card-header">
-          <h3 class="card-title" id="modal-add-member-title">Tambah Anggota Baru</h3>
+          <h2 class="card-title" id="modal-add-member-title">Tambah Anggota Baru</h2>
           <button class="icon-btn" type="button" onclick="closeModal('add-member')" aria-label="Tutup dialog">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
           </button>

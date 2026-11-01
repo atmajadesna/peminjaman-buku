@@ -32,7 +32,7 @@
     <div class="sidebar-brand">
       <div class="brand-icon" aria-hidden="true">P</div>
       <div>
-        <h1>Pustaka</h1>
+        <div class="brand-name">Pustaka</div>
         <div class="brand-sub">Sistem Peminjaman Buku</div>
       </div>
     </div>

@@ -9,7 +9,7 @@
 
   <div class="page-header">
     <div>
-      <h2 class="page-title">Dashboard</h2>
+      <h1 class="page-title">Dashboard</h1>
       <p class="page-subtitle">Ringkasan koleksi dan sirkulasi per {{ now()->translatedFormat('j F Y') }}</p>
     </div>
     <a href="{{ route('loans.index') }}" class="btn btn-primary">
@@ -73,7 +73,7 @@
   <div class="grid-2">
     <div class="card">
       <div class="card-header">
-        <h3 class="card-title">Peminjaman Terbaru</h3>
+        <h2 class="card-title">Peminjaman Terbaru</h2>
         <a href="{{ route('loans.index') }}" class="btn btn-ghost btn-sm">Lihat semua</a>
       </div>
 
@@ -120,7 +120,7 @@
 
     <div class="card">
       <div class="card-header">
-        <h3 class="card-title">Jatuh Tempo Terdekat</h3>
+        <h2 class="card-title">Jatuh Tempo Terdekat</h2>
       </div>
       <div class="card-body">
         @if($dueSoon->isEmpty())
@@ -144,7 +144,7 @@
 
   <div class="card">
     <div class="card-header">
-      <h3 class="card-title">Paling Sering Dipinjam</h3>
+      <h2 class="card-title">Paling Sering Dipinjam</h2>
       <a href="{{ route('books.index') }}" class="btn btn-ghost btn-sm">Buka katalog</a>
     </div>
     <div class="card-body">

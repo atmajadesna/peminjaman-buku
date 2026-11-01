@@ -9,7 +9,7 @@
 
   <div class="page-header">
     <div>
-      <h2 class="page-title">Peminjaman</h2>
+      <h1 class="page-title">Peminjaman</h1>
       <p class="page-subtitle">Masa pinjam {{ \App\Models\Loan::LOAN_DAYS }} hari · denda Rp{{ number_format(\App\Models\Loan::FINE_PER_DAY, 0, ',', '.') }} per hari terlambat</p>
     </div>
     <button class="btn btn-primary" type="button" onclick="openModal('new-borrow')">
@@ -153,7 +153,7 @@
       <form method="POST" action="{{ route('loans.store') }}">
         @csrf
         <div class="card-header">
-          <h3 class="card-title" id="modal-new-borrow-title">Peminjaman Baru</h3>
+          <h2 class="card-title" id="modal-new-borrow-title">Peminjaman Baru</h2>
           <button class="icon-btn" type="button" onclick="closeModal('new-borrow')" aria-label="Tutup dialog">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
           </button>

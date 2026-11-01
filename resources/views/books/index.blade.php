@@ -9,7 +9,7 @@
 
   <div class="page-header">
     <div>
-      <h2 class="page-title">Katalog Buku</h2>
+      <h1 class="page-title">Katalog Buku</h1>
       <p class="page-subtitle">{{ number_format($books->total(), 0, ',', '.') }} judul dalam koleksi</p>
     </div>
     <div style="display:flex;gap:var(--space-sm);align-items:center;flex-wrap:wrap">
@@ -77,7 +77,7 @@
             </div>
           </div>
           <div class="book-card-body">
-            <h3 class="bc-title">{{ $book->title }}</h3>
+            <h2 class="bc-title">{{ $book->title }}</h2>
             <p class="bc-author">{{ $book->author }} · {{ $book->published_year }}</p>
             <div class="bc-genre-row">
               <span class="badge badge-genre">{{ $book->genre }}</span>
@@ -125,7 +125,7 @@
       <form method="POST" action="{{ route('books.store') }}">
         @csrf
         <div class="card-header">
-          <h3 class="card-title" id="modal-add-book-title">Tambah Buku Baru</h3>
+          <h2 class="card-title" id="modal-add-book-title">Tambah Buku Baru</h2>
           <button class="icon-btn" type="button" onclick="closeModal('add-book')" aria-label="Tutup dialog">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
           </button>
