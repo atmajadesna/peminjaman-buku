@@ -105,6 +105,13 @@
     </header>
 
     <div class="page-content">
+      @if(config('app.demo'))
+        <div class="demo-banner" role="note">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="flex-shrink:0"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          <span><strong>Demo publik.</strong> Semua data di sini buatan dan bisa diubah siapa saja yang masuk. Bukan catatan perpustakaan sungguhan.</span>
+        </div>
+      @endif
+
       @if(session('status'))
         <div class="alert alert-success" role="status">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="flex-shrink:0;margin-top:2px"><path d="M20 6L9 17l-5-5"/></svg>

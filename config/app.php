@@ -29,6 +29,13 @@ return [
     'env' => env('APP_ENV', 'production'),
 
     /*
+    | When true, every page carries a banner saying the data is fake and
+    | publicly editable. Turned on for the hosted demo so nobody mistakes it
+    | for a real library system.
+    */
+    'demo' => env('PUSTAKA_DEMO', false),
+
+    /*
     |--------------------------------------------------------------------------
     | Application Debug Mode
     |--------------------------------------------------------------------------

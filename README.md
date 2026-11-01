@@ -150,6 +150,8 @@ php artisan test
 
 Pemeriksaan antarmuka dijalankan terpisah dengan Playwright pada lima lebar layar (320, 375, 414, 768, 1024, 1440 px): alur masuk, katalog, modal, mode gelap, skip-link, laci navigasi, ketiadaan overflow horizontal, keselarasan kartu, dan tidak adanya galat JavaScript.
 
+Untuk pemasangan yang bisa diakses publik, setel `PUSTAKA_DEMO=true`. Setiap halaman akan menampilkan pemberitahuan bahwa data di dalamnya buatan dan dapat diubah siapa saja.
+
 ---
 
 ## Batasan
