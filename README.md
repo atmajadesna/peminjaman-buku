@@ -146,7 +146,7 @@ Kode peminjaman (`PJ-2026-0001`) dan kode anggota (`AGT-0001`) dibuat berurutan 
 php artisan test
 ```
 
-24 test, 97 asersi. Mencakup alur peminjaman dan pengembalian, perhitungan denda, penolakan stok habis, penolakan anggota nonaktif, larangan meminjam judul yang sama dua kali, validasi ISBN ganda, pembuatan kode berurutan, serta sifat partisi pada tab filter.
+29 test, 111 asersi. Mencakup alur peminjaman dan pengembalian, perhitungan denda per hari kalender, penolakan stok habis, penolakan anggota nonaktif, larangan meminjam judul yang sama dua kali, validasi ISBN ganda, pembuatan kode berurutan, serta sifat partisi pada tab filter.
 
 Pemeriksaan antarmuka dijalankan terpisah dengan Playwright pada lima lebar layar (320, 375, 414, 768, 1024, 1440 px): alur masuk, katalog, modal, mode gelap, skip-link, laci navigasi, ketiadaan overflow horizontal, keselarasan kartu, dan tidak adanya galat JavaScript.
 
