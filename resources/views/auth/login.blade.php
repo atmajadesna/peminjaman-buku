@@ -29,6 +29,13 @@
       </div>
     </div>
 
+    @if(config('app.demo'))
+      <div class="demo-banner" role="note" style="margin-bottom:var(--space-md)">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="flex-shrink:0"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+        <span><strong>Demo publik.</strong> Datanya buatan, bukan catatan perpustakaan sungguhan. Jangan masukkan data pribadi.</span>
+      </div>
+    @endif
+
     <h1 style="font-family:var(--f-heading);font-size:1.15rem;font-weight:600;margin-bottom:var(--space-xs)">Masuk ke meja petugas</h1>
     <p style="font-size:.85rem;color:var(--c-text-muted);margin-bottom:var(--space-lg)">Kelola koleksi, peminjaman, dan pengembalian buku.</p>
 
